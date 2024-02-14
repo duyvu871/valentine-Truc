@@ -134,6 +134,8 @@ button[type="submit"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 .director {
     display: flex;

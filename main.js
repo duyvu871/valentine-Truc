@@ -56,7 +56,7 @@ const Slide = {
                         `);
         }).join('')}
                 </div>
-                <p class="text-gray-800 p-4 text-[12px] leading-[1.2]">${content}</p>
+                <p class="text-gray-800 p-4 text-[1.4rem] leading-[1.2]">${content}</p>
             </div>
         `);
     },

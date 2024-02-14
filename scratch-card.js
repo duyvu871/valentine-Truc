@@ -62,7 +62,7 @@
         }
         function handlePercentage(filledInPixels) {
             filledInPixels = filledInPixels || 0;
-            if (filledInPixels > 60) {
+            if (filledInPixels > 50) {
                 canvas.parentNode.removeChild(canvas);
             }
         }
