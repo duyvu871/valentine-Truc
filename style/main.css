@@ -1,0 +1,200 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 20px 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 214, 244, 0.75);
+    font-family: "Paytone One", sans-serif;
+}
+
+textarea {
+    font-family: "Paytone One", sans-serif !important;
+}
+
+.container {
+    border: 3px solid #db5bff;
+    border-radius: 10px;
+    position: relative;
+    width: 300px !important;
+    height: fit-content !important;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    color: whitesmoke;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.form {
+    padding: 20px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    position: relative;
+    z-index: 1;
+    background-color: #db5bff;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button[type="submit"] {
+    font-size: 14px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .4);
+    animation: fadeIn 0.5s forwards;
+}
+
+.modal-wrapper {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    padding-top: 5px;
+    border: 1px solid #888;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.model-content {
+    overflow: hidden;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: end;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slide-area {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slide-area > div {
+    width: 100%;
+    height: auto; /*100%;*/
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    /*padding: 20px;*/
+    text-align: center;
+    /*border: 1px solid #ccc;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.director {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 0.5s;
+}
+
+.slide.active img{
+    position: relative;
+    top: -100%;
+    opacity: 0;
+    animation: fadeInDown 4s forwards;
+    /*z-index: 999;*/
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.letter-font {
+    font-family: "Paytone One", sans-serif;
+}
+
+@keyframes fadeInDown {
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.fade-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.fade-container.active {
+    opacity: 1;
+    visibility: visible;
+}
