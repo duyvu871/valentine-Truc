@@ -137,6 +137,7 @@ button[type="submit"] {
     justify-content: center;
     align-items: center;
     padding: 5px;
+    border-radius: 10px;
 }
 .director {
     display: flex;

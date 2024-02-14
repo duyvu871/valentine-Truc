@@ -76,7 +76,7 @@ const Slide = {
 
 function GenerateSlide() {
     Slide.slideItemImage.forEach((item, index) => {
-        console.log("index: ", index)
+        // console.log("index: ", index)
         const slideItem = Slide.slideItemContent([item], Slide.content[index]);
         Slide.slideArea.appendChild(
             createVisualElement(`
@@ -103,17 +103,6 @@ function GenerateSlide() {
         );
     });
 }
-
-// ModalElement.addEventListener('click', (e) => {
-//     ModalElement.classList.remove('fade-in');
-//     ModalElement.classList.add('fade-out');
-//     setTimeout(() => {
-//         ModalElement.style.display = 'none';
-//         ModalElement.innerHTML = '';
-//     }, 300);
-// });
-
-
 function run() {
     db.ref('feedbacks').set({
         starRating,
