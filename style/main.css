@@ -90,7 +90,7 @@ button[type="submit"] {
     padding: 20px;
     padding-top: 5px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     max-width: 500px;
     display: flex;
     flex-direction: column;
